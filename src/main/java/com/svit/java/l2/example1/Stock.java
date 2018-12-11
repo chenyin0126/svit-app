@@ -1,5 +1,9 @@
 package com.svit.java.l2.example1;
-
+/**
+ * 
+ * @author sv-it
+ *
+ */
 public class Stock implements Printable1
 {
     private String tickerSymbol = new String("XYZ");

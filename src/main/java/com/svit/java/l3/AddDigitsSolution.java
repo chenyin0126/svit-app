@@ -1,5 +1,8 @@
 package com.svit.java.l3;
-
+/**
+ * @author sv-it
+ *
+ */
 public class AddDigitsSolution {
     /**
      * @param num: a non-negative integer

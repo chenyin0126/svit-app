@@ -2,7 +2,9 @@ package com.svit.java;
 
 /**
  * Hello world!
- *
+ * 
+ * 
+ * @author sv-it
  */
 public class App 
 {
