@@ -23,7 +23,7 @@ class ExtendShow extends BaseShow {
 	// method overriding
 	@Override
 	public void show() {
-		System.out.println("Extend.show: " + str);
+		System.out.println("Extend.show: " + str); 
 	}
 }
 
