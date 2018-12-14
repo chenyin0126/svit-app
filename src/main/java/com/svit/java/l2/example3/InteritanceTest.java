@@ -58,10 +58,15 @@ public class InteritanceTest{
 		b.identify();
 		System.out.println(b.instanceField());	
 		
-		A a = new B(3);
+		
+		A a = new A(3);
 		a.identify();
 		System.out.println(((B)a).instanceField());		
-		
+
+		//runtime exception 
+//		b = (B)a;
+//		System.out.println(b.instanceField() + "**");
+
         ClassA a1 = new ClassA();
         ClassA a2 = new ClassB();		
 	}
