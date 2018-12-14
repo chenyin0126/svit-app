@@ -43,6 +43,7 @@ public class MyQueue {
 		myQueue.push(3);
 		System.out.println(myQueue.top());//2
 		System.out.println(myQueue.pop());//2
+		System.out.println(myQueue.pop());//3
 		
 		
 
