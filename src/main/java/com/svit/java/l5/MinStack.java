@@ -15,12 +15,17 @@ public class MinStack {
 	            min=x;
 	        }
 	        stack.push(x);
+	        System.out.println(stack);
+	       
 	    }
 
 	    public void pop() {
 	        // if pop operation could result in the changing of the current minimum value, 
 	        // pop twice and change the current minimum value to the last minimum value.
-	        if(stack.pop() == min) min=stack.pop();
+	        if(stack.pop() == min) {
+	        	min=stack.pop();
+	        }
+//	        System.out.println(min);
 	    }
 
 	    public int top() {
@@ -33,12 +38,12 @@ public class MinStack {
 	    
 	public static void main(String[] args) {
 		MinStack minStack = new MinStack();
-		minStack.push(-2);
 		minStack.push(0);
-		minStack.push(-3);
-		System.out.println(minStack.getMin());   //--> Returns -3.
+		minStack.push(-1);
+//		minStack.push(-3);
+		System.out.println(minStack.getMin());   //--> Returns -1.
 		minStack.pop();
-		System.out.println(minStack.top());      //--> Returns 0.
+//		System.out.println(minStack.top());      //--> Returns 0.
 		System.out.println(minStack.getMin());   //--> Returns -2.
 	}
 
