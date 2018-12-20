@@ -62,4 +62,14 @@ public class AllSubsets{
         
         return result;
     }
+    
+    
+    // recursive way
+    
+    
+    
+    //iterative way
+    
+    
+    
 }
