@@ -9,6 +9,7 @@ package com.svit.java.l7;
  * }
  */
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -119,22 +120,67 @@ public class BinaryTreeLevelOrderTraversal{
 	 * @param root
 	 * @return
 	 */
-//    public static List<List<Integer>> BottomUpLevelOrder(TreeNode root) {
-//    	// to be finished
-//    	
-//
-//    }
-    
-    
+    public static List<List<Integer>> BottomUpLevelOrder(TreeNode root) {
+    	// to be finished
+    	
+    	List<List<Integer>> res = new ArrayList<>();
+    	LinkedList<TreeNode> queue = new LinkedList<>();
+    	queue.offer(root);
+    	while(!queue.isEmpty()) {
+    		int size = queue.size();
+    		List<Integer> list= new ArrayList<>();
+    		for(int i=0;i<size;i++) {
+    			TreeNode node = queue.poll();
+    			list.add(node.val);
+    			if(node.left!=null){
+    				queue.add(0, node.left);
+    			}
+    			
+    			if(node.right!=null) {
+    				queue.offer(node.right);
+    			}
+    		}
+    		res.add(new ArrayList<>(list));
+    	}
+    	return res;
+    }
     
 	/**
 	 * Zigzag Level order print (ie, from left to right, then right to left for the next level and alternate between).
 	 * @param root
 	 * @return
 	 */
-//    public static List<List<Integer>> ZigzagLevelOrder(TreeNode root) {
-//    	// to be finished
-//    	
-//
-//    }
+    public static List<List<Integer>> ZigzagLevelOrder(TreeNode root) {
+    	// to be finished
+    	
+    	List<List<Integer>> res = new ArrayList<>();
+    	
+    	Queue<TreeNode> queue = new LinkedList<>();
+    	queue.offer(root);
+    	int level =0;
+    	while(!queue.isEmpty()) {
+    		level++;
+    		List<Integer> list = new ArrayList<>();
+    		int size = queue.size();
+    		for(int i=0;i<size; i++) {
+    			
+    			TreeNode node = queue.poll();
+    			list.add(node.val);
+    			if(node.left!=null) {
+    				queue.offer(node.left);
+    				
+    			}
+    			
+    			if(node.right!=null) {
+    				queue.offer(node.right);
+    			}
+    		}
+    		if(level%2!=0) {
+    			Collections.reverse(list);;
+    		}
+    		res.add(new ArrayList<Integer>(list));
+    	}
+    	return res;
+
+    }
 }

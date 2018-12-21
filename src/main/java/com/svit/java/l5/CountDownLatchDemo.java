@@ -7,7 +7,7 @@ public class CountDownLatchDemo {
 	public static void main(String args[]) throws InterruptedException {
 		// Let us create task that is going to
 		// wait for four threads before it starts
-		CountDownLatch latch = new CountDownLatch(4);
+		CountDownLatch latch = new CountDownLatch(5);
 
 		// Let us create four worker
 		// threads and start them.

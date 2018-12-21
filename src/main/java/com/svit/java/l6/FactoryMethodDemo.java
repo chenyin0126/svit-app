@@ -8,6 +8,7 @@ package com.svit.java.l6;
 
 interface Shape {
 	void draw();
+
 	String getDesc();
 }
 
@@ -17,8 +18,9 @@ class Rectangle implements Shape {
 	public void draw() {
 		System.out.println("Inside Rectangle.draw() method.");
 	}
+
 	@Override
-	public String getDesc(){
+	public String getDesc() {
 		return this.getClass().toString();
 	}
 }
@@ -29,9 +31,9 @@ class Square implements Shape {
 	public void draw() {
 		System.out.println("Inside Square.draw() method.");
 	}
-	
+
 	@Override
-	public String getDesc(){
+	public String getDesc() {
 		return this.getClass().toString();
 	}
 }
@@ -42,9 +44,9 @@ class Circle implements Shape {
 	public void draw() {
 		System.out.println("Inside Circle.draw() method.");
 	}
-	
+
 	@Override
-	public String getDesc(){
+	public String getDesc() {
 		return this.getClass().toString();
 	}
 }
@@ -69,7 +71,6 @@ class ShapeFactory {
 		return null;
 	}
 }
-
 
 class SizeFactory {
 

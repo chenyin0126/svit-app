@@ -21,7 +21,7 @@ public class StreamDemo {
 		System.out.println(sortedStr);
 
 		// collect method and return a set
-		Set<Integer> squareSet = number.stream().map(x -> x * x).collect(Collectors.toSet());
+		Set<Integer> squareSet = number.stream().map(x -> x * x).collect(Collectors.toSet());//?
 		System.out.println(squareSet);
 
 		// forEach
@@ -29,6 +29,7 @@ public class StreamDemo {
 
 		// reduce
 		int even = number.stream().filter(x -> x % 2 == 0).reduce(0, (ans, i) -> ans + i);
+		
 
 		System.out.println(even);
 
